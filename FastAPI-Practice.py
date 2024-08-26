@@ -3,6 +3,7 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+
 @app.get('/blog')                                                               # slash is for local host - Path operation decorator
 def index(limit=10, published:bool = True, sort: Optional[str] = None):                                     # path operation function 
     # only get 10 published blogs
